@@ -58,9 +58,11 @@ function EditForm() {
         <input
           id="amount"
           type="number"
+          // pattern = "0.00"
+          pattern="(\d{3})([\.])(\d{2})"
           value={transaction.amount}
           onChange={handleTextChange}
-          placeholder="Amount..."
+          placeholder="Amount"
         />
         <br />
         <input className="button" type="submit" value="Update" />

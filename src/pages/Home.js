@@ -4,6 +4,7 @@ function Home() {
   return (
     <div className="home">
       <header className="home-header">
+        <h1>Budget Tracker</h1>
         <img
           className="home-logo"
           src="https://call2recycle.s3.amazonaws.com/us-wordpress/20170127141112/recycle-logo-chalk-board.jpg"
