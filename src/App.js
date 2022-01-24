@@ -1,22 +1,22 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Nav from "./components/Nav";
-import Home from './components/Home';
-import Transactions from "./components/Transactions"
-import Details from './components/Details';
-import EditForm from './components/EditForm';
-// import NewForm from './components/NewForm';
+import NavBar from "./components/Nav";
+import Home from './pages/Home';
+import Index from "./pages/Index"
+import Display from './pages/Display';
+import Edit from './pages/Edit';
+import New from './pages/New';
 
 function App() {
   return (
     <div className="app">
-      <Nav />
+      <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/transactions" element={<Transactions />} />
-        <Route path="/transactions/:id" element={<Details />} />
-        <Route path="/transactions/:id/edit" element={<EditForm />} />
-        {/* <Route path="/transactions/:id/new" element={<NewForm />} /> */}
+        <Route path="/transactions" element={<Index />} />
+        <Route path="/transactions/:id" element={<Display />} />
+        <Route path="/transactions/:id/edit" element={<Edit />} />
+        <Route path="/transactions/new" element={<New />} />
       </Routes>
     </div>
   );

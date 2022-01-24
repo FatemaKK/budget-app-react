@@ -1,16 +1,19 @@
 import { Link } from "react-router-dom";
 
-function Nav() {
+function NavBar() {
   return (
     <div className="navBar">
+      <Link to="/">
+        <h1>💰💰💰</h1>
+      </Link>
       <Link to="/transactions">
         <h1>BUDGET TRACKER</h1>
       </Link>
-      <button>
+      <button className="button">
         <Link to="/transactions/new">New Transaction</Link>
       </button>
     </div>
   );
 }
 
-export default Nav;
+export default NavBar;

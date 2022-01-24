@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Transaction from "./Transaction";
@@ -15,12 +16,24 @@ function Transactions() {
       .catch((e) => console.log("catch", e));
   }, []);
 
+  const amounts = transactions.map((transaction) => transaction.amount);
+  let total = amounts.reduce(
+    (previous, current) => Number(previous) + Number(current),
+    0
+  );
+  let formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+
   return (
     <div className="transactions">
-        <h2>Bank Account Total: </h2>
+      <h1>Bank Account Total: {formatter.format(total)} </h1>
       <table>
         {transactions.map((transaction, index) => {
-          return <Transaction key={index} transaction={transaction} id={index}/>;
+          return (
+            <Transaction key={index} transaction={transaction} id={index} />
+          );
         })}
       </table>
     </div>

@@ -1,26 +1,15 @@
-import { useState, useEffect } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function EditForm() {
-  const URL = process.env.REACT_APP_API_URL;
+function NewForm() {
   const navigate = useNavigate();
-  let { id } = useParams();
-
+  const URL = process.env.REACT_APP_API_URL;
   const [transaction, setTransaction] = useState({
     date: "",
     name: "",
     amount: 0,
   });
-
-  useEffect(() => {
-    axios
-      .get(`${URL}/transactions/${id}`)
-      .then((response) => {
-        setTransaction(response.data);
-      })
-      .catch((e) => console.log("catch", e));
-  }, []);
 
   const handleTextChange = (event) => {
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
@@ -28,30 +17,30 @@ function EditForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.put(`${URL}/transactions/${id}`, transaction).then(() => {
-      navigate(`/transactions/${id}`);
+    axios.post(`${URL}/transactions`, transaction).then(() => {
+      navigate("/transactions");
     });
   };
 
   return (
-    <div className="editForm">
+    <div className="newForm">
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Date:</label>
         <input
           id="date"
-          value={transaction.date}
           type="date"
+          value={transaction.date}
           onChange={handleTextChange}
-          placeholder="Date..."
+          placeholder="Date"
           required
         />
-        <label htmlFor="source">Name:</label>
+        <label htmlFor="name">Source:</label>
         <input
           id="source"
           type="text"
           value={transaction.source}
           onChange={handleTextChange}
-          placeholder="Name of Source..."
+          placeholder="Name of Source"
           required
         />
         <label htmlFor="amount">Amount:</label>
@@ -60,16 +49,14 @@ function EditForm() {
           type="number"
           value={transaction.amount}
           onChange={handleTextChange}
-          placeholder="Amount..."
+          placeholder="Amount"
         />
+
         <br />
-        <input className="button" type="submit" value="Update" />
+        <input className="button" type="submit" value="Create New" />
       </form>
-      <Link to={`/transactions/${id}`}>
-        <button className="button">Back</button>
-      </Link>
     </div>
   );
 }
 
-export default EditForm;
+export default NewForm;

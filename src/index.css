@@ -1,69 +1,69 @@
 body {
-  margin: 0;
-  font-family: "Courier New", Courier, monospace;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-.home {
-  text-align: center;
-}
-
-.home-logo {
-  height: 40vmin;
-  opacity: 0.5;
-  border-radius: 28px;
-}
-
-.home-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: rgb(172, 170, 170);
-}
-
-.navBar {
-  background-color: rgb(108, 194, 186);
-  display: flex;
-  justify-content: space-around;
-}
-
-.navBar a {
-  font-weight: bold;
-  color: rgb(111, 111, 111);
-  text-decoration: none;
-}
-
-button {
-  width: 180px;
-  padding: 15px;
-  text-align: center;
-  padding: 10px;
-  font-size: 20px;
-  letter-spacing: 1px;
-  display: inline-block;
-  background-color: transparent;
-  border-width: 4px;
-  border-style: solid;
-  border-image: linear-gradient(to right, #75e19d, #b5c1c1) 1;
-  margin: 12px 8px 12px 8px;
-}
-
-.transaction a {
-  font-weight: bold;
-  color:rgb(15, 201, 233);
-}
-
-.transactions h2 {
-  text-align: center;
-  justify-content: center;
-  color: #898c8c;
-}
-
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  .home {
+    text-align: center;
+  }
+  
+  .home-logo {
+    height: 60vmin;
+    opacity: 0.5;
+    border-radius: 28px;
+  }
+  
+  .home-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(172, 170, 170);
+  }
+  
+  .navBar {
+    background-color: rgb(108, 194, 186);
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .navBar a {
+    font-weight: bold;
+    color: rgb(111, 111, 111);
+    text-decoration: none;
+  }
+  
+  .button {
+    width: 180px;
+    padding: 15px;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    background-color: transparent;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to right, #75e19d, #b5c1c1) 1;
+    margin: 12px 8px 12px 8px;
+  }
+  
+  .transaction a {
+    font-weight: bold;
+    color:rgb(15, 201, 233);
+  }
+  
+  .transactions h2 {
+    text-align: center;
+    justify-content: center;
+    color: #898c8c;
+  }
+  
