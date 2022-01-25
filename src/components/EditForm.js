@@ -10,7 +10,9 @@ function EditForm() {
   const [transaction, setTransaction] = useState({
     date: "",
     name: "",
-    amount: 0,
+    amount: "",
+    from: "",
+    category: "",
   });
 
   useEffect(() => {
@@ -40,36 +42,55 @@ function EditForm() {
         <input
           id="date"
           value={transaction.date}
-          type="date"
+          type="text"
           onChange={handleTextChange}
-          placeholder="Date..."
-          required
         />
+        <br />
+        <pre></pre>
         <label htmlFor="source">Name:</label>
         <input
           id="source"
           type="text"
           value={transaction.source}
           onChange={handleTextChange}
-          placeholder="Name of Source..."
-          required
         />
+        <br />
+        <pre></pre>
+        <label htmlFor="from">From:</label>
+        <input
+          id="from"
+          type="text"
+          value={transaction.from}
+          onChange={handleTextChange}
+        />
+        <br />
+        <pre></pre>
         <label htmlFor="amount">Amount:</label>
         <input
           id="amount"
           type="number"
-          // pattern = "0.00"
-          pattern="(\d{3})([\.])(\d{2})"
           value={transaction.amount}
           onChange={handleTextChange}
-          placeholder="Amount"
         />
         <br />
+        <pre></pre>
+        <label for="category">Category:</label>
+        <select name="category" id="category">
+          <option value="None">None</option>
+          <option value="Bare Necessity">Bare Necessity</option>
+          <option value="Blessing">Savings</option>
+          <option value="Civic Duty">Civic Duty</option>
+          <option value="Income">Income</option>
+          <option value="Recreational">Recreational</option>
+          <option value="Splurge">Splurge</option>
+          <option value="Savings">Savings</option>
+        </select>
+        <br />
         <input className="button" type="submit" value="Update" />
+        <Link to={`/transactions/${id}`}>
+          <button className="button">Back</button>
+        </Link>
       </form>
-      <Link to={`/transactions/${id}`}>
-        <button className="button">Back</button>
-      </Link>
     </div>
   );
 }

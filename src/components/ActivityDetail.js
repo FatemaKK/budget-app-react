@@ -25,30 +25,35 @@ function ActivityDetail() {
     });
   };
 
+  let formatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+
   return (
     <div className="activity">
       <div>
-        <p> {transaction.date} </p>
-        <p> {transaction.source} </p>
-        <p> {transaction.amount} </p>
+        <p>Date: {transaction.date} </p>
+        <p>Name: {transaction.source} </p>
+        <p>Category: {transaction.category} </p>
+        <p>From: {transaction.from} </p>
+        <p>Amount: {formatter.format(transaction.amount)} </p>
       </div>
+      <br/>
       <div className="navigation">
         <div>
-          {" "}
           <Link to={"/transactions"}>
             <button className="button">Back</button>
           </Link>
         </div>
         <br />
         <div>
-          {" "}
           <Link to={`/transactions/${id}/edit`}>
             <button className="button">Edit</button>
           </Link>
         </div>
         <br />
         <div>
-          {" "}
           <button className="button" onClick={handleDelete}>
             Delete
           </button>

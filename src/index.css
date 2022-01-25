@@ -1,69 +1,134 @@
 body {
-    margin: 0;
-    font-family: "Courier New", Courier, monospace;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
-  }
-  
-  .home {
-    text-align: center;
-  }
-  
-  .home-logo {
-    height: 60vmin;
-    opacity: 0.5;
-    border-radius: 28px;
-  }
-  
-  .home-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: rgb(172, 170, 170);
-  }
-  
-  .navBar {
-    background-color: rgb(108, 194, 186);
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .navBar a {
-    font-weight: bold;
-    color: rgb(111, 111, 111);
-    text-decoration: none;
-  }
-  
-  .button {
-    width: 180px;
-    padding: 15px;
-    text-align: center;
-    padding: 10px;
-    font-size: 20px;
-    letter-spacing: 1px;
-    display: inline-block;
-    background-color: transparent;
-    border-width: 4px;
-    border-style: solid;
-    border-image: linear-gradient(to right, #75e19d, #b5c1c1) 1;
-    margin: 12px 8px 12px 8px;
-  }
-  
-  .transaction a {
-    font-weight: bold;
-    color:rgb(15, 201, 233);
-  }
-  
-  .transactions h2 {
-    text-align: center;
-    justify-content: center;
-    color: #898c8c;
-  }
-  
+  background: linear-gradient(45deg, rgb(233, 220, 222), #d2ebd8);
+  height: 100vh;
+  color: rgb(63, 63, 63);
+  font-family: "Montserrat", sans-serif;
+  padding: 8px;
+  margin: 12px;
+  justify-content: center;
+}
+
+.home {
+  text-align: center;
+}
+
+.home-logo {
+  height: 60vmin;
+  opacity: 0.7;
+  box-shadow: 20px 20px 40px 6px rgba(63, 109, 76, 0.2);
+}
+
+.home-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(101, 101, 101);
+}
+
+.navBar {
+  background-color: rgb(108, 194, 186);
+  display: flex;
+  justify-content: space-evenly;
+  /* margin: 10px; */
+}
+
+.navBar a {
+  font-weight: bold;
+  color: rgb(111, 111, 111);
+  text-decoration: none;
+}
+
+.button {
+  width: 180px;
+  padding: 15px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  display: inline-block;
+  background-color: transparent;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to right, #75e19d, #b5c1c1) 1;
+  margin: 12px 8px 12px 8px;
+}
+
+.transaction a {
+  font-weight: bold;
+  color: rgb(15, 201, 233);
+}
+
+.transactions h2 {
+  text-align: center;
+  justify-content: center;
+  color: #898c8c;
+}
+
+td {
+  text-align: center;
+}
+
+table {
+  padding: 12px;
+  box-shadow: 20px 20px 40px 6px rgba(45, 44, 45, 0.2);
+  width: 100%;
+  height: 60vmin;
+  opacity: 0.8;
+}
+
+tr {
+  border: solid rgb(186, 186, 186);
+  border-width: 0.25px;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f4f4;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(63, 63, 63);
+}
+
+form {
+  padding: 30px;
+  height: 200px;
+  box-shadow: 20px 20px 40px 6px rgba(45, 44, 45, 0.2); 
+  text-align: justify;
+}
+
+
+.activity {
+    padding: 30px;
+    height: 200px;
+    box-shadow: 20px 20px 40px 6px rgba(45, 44, 45, 0.2);
+    text-align: justify;
+}
+
+.navigation {
+  margin-top: 20px;
+  display: flex;
+  text-align: justify;
+  justify-content: space-evenly;
+  box-shadow: 20px 20px 40px 6px rgba(163, 205, 175, 0.2);
+}
+
+h1 {
+  text-align: left;
+  color: rgb(63, 63, 63);
+}
+
+input {
+  border-style: none;
+  background: linear-gradient(45deg, rgb(233, 220, 222), #d2ebd8);
+  justify-content: space-between;
+}
+
+select {
+  border-style: none;
+  background: linear-gradient(45deg, rgb(233, 220, 222), #d2ebd8);
+  justify-content: space-evenly;
+}

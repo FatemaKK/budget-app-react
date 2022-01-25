@@ -3,7 +3,7 @@ import EditForm from "../components/EditForm";
 function Edit() {
   return (
     <div className="editPage">
-      <h3>Edit Activity</h3>
+      <h1>Edit Activity</h1>
       <EditForm />
     </div>
   );
