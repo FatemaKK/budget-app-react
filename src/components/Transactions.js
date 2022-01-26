@@ -28,7 +28,9 @@ function Transactions() {
 
   return (
     <div className="transactions">
-      <h1>Bank Account Total: {formatter.format(total)} </h1>
+      <div>
+        <h1>Bank Account Total: {formatter.format(total)}</h1>
+      </div>
       <table>
         {transactions.map((transaction, index) => {
           return (
