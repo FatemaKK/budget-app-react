@@ -35,13 +35,20 @@ function EditForm() {
     });
   };
 
+  let currentDate = new Date(`${transaction.date}`);
+  let displayDate = currentDate.toLocaleString("en-US", {
+    month: "long",
+    day: "2-digit",
+    year: "numeric",
+  });
+
   return (
     <div className="editForm">
       <form onSubmit={handleSubmit}>
         <label htmlFor="date">Date:</label>
         <input
           id="date"
-          value={transaction.date}
+          value={`${displayDate}`}
           type="text"
           onChange={handleTextChange}
         />

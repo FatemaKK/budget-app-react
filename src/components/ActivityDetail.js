@@ -30,16 +30,23 @@ function ActivityDetail() {
     currency: "USD",
   });
 
+  let currentDate = new Date(`${transaction.date}`);
+  let displayDate = currentDate.toLocaleString("en-US", {
+    month: "long",
+    day: "2-digit",
+    year: "numeric",
+  });
+
   return (
     <div className="activity">
       <div>
-        <p>Date: {transaction.date} </p>
+        <p>Date: {`${displayDate}`} </p>
         <p>Name: {transaction.source} </p>
         <p>Category: {transaction.category} </p>
         <p>From: {transaction.from} </p>
         <p>Amount: {formatter.format(transaction.amount)} </p>
       </div>
-      <br/>
+      <br />
       <div className="navigation">
         <div>
           <Link to={"/transactions"}>

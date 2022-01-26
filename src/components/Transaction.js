@@ -7,9 +7,16 @@ function Transaction({ transaction, id }) {
     currency: "USD",
   });
 
+  let currentDate = new Date(`${transaction.date}`);
+  let displayDate = currentDate.toLocaleString("en-US", {
+    month: "long",
+    day: "2-digit",
+    year: "numeric",
+  });
+
   return (
     <tr className="transaction">
-      <td>{transaction.date}</td>
+      <td>{`${displayDate}`}</td>
       <td>
         <Link to={`/transactions/${id}`}>{transaction.source}</Link>
       </td>

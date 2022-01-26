@@ -33,7 +33,7 @@ function NewForm() {
           value={transaction.date}
           type="text"
           onChange={handleTextChange}
-          placeholder="    Date"
+          placeholder="    mm/dd/yyyy"
           required
         />
         <br />
@@ -44,7 +44,7 @@ function NewForm() {
           type="text"
           value={transaction.source}
           onChange={handleTextChange}
-          placeholder="    Name of Source..."
+          placeholder="    Source"
           required
         />
         <br />
